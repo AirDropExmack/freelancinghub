@@ -36,7 +36,7 @@ const checkData = zod.object({
   text : zod.string()
 })
 
-app.post(`/${secret_code}/postdata` , async(req,res)=>{
+app.post("/postreq/postdata" , async(req,res)=>{
     const {success} = checkData.safeParse(req.body);
     if(!success) return res.json({msg : "Your data do not fulfill our data requirement || Insert a new data"});
     try{
