@@ -6,7 +6,7 @@ const app = express();
 require("dotenv").config();
 const PORT = process.env.PORT;
 const Database = process.env.DATABASE_URL;
-const secret_code = process.env.secret_code;
+// const secret_code = process.env.secret_code;
 const cors = require("cors")
 console.log("The database url is : " + Database);
 const zod = require("zod");
