@@ -1,6 +1,34 @@
+"use client"
+
 import { Send, Sparkles, MessageSquare, User, Phone, Mail } from 'lucide-react';
+import axios from 'axios';
+import { useState } from 'react';
 
 export function Myform() {
+
+ 
+  const [username , setUsername] = useState("")
+  const [email , setEmail] = useState("")
+  const [phoneNumber , setphoneNumber] = useState("")
+  const [text,setText] = useState("")
+
+  const sendDetails = async()=>{
+    await axios.post("http://localhost:9000/postreq/postdata" , {
+      username:username,
+      email : email,
+      phoneNumber : phoneNumber,
+      text : text
+    })
+    .then((response)=>{
+      console.log("your message is " + response.data.msg)
+      alert("your message is " + response.data.msg)
+    })
+    .catch((error)=>{
+      console.log("your message is " + error)
+      alert("your message is " + error)
+    })
+  }
+
   return (
     <div className="w-full max-w-4xl mx-auto p-4 md:p-8">
       <div className="bg-black rounded-3xl shadow-2xl overflow-hidden border border-purple-300/20">
@@ -26,6 +54,7 @@ export function Myform() {
                   type="text"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-base md:text-lg"
                   placeholder="Your Name"
+                  onChange={(e)=>setUsername(e.target.value)}
                   required
                 />
               </div>
@@ -38,6 +67,7 @@ export function Myform() {
                   type="tel"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-base md:text-lg"
                   placeholder="Your Phone"
+                  onChange={(e)=>setphoneNumber(e.target.value)}
                   required
                 />
               </div>
@@ -50,6 +80,7 @@ export function Myform() {
                   type="email"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-base md:text-lg"
                   placeholder="Your Email"
+                  onChange={(e)=>setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -62,6 +93,7 @@ export function Myform() {
                   rows="5"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 resize-none text-base md:text-lg"
                   placeholder="Type your message here... 🚀"
+                  onChange={(e)=>setText(e.target.value)}
                   required
                 />
               </div>
@@ -71,6 +103,7 @@ export function Myform() {
           {/* Submit Button */}
           <button
             type="submit"
+            onClick={sendDetails}
             className="w-full bg-gradient-to-r from-pink-500 to-purple-500 text-white py-3 md:py-5 px-6 md:px-8 rounded-2xl font-medium flex items-center justify-center space-x-2 md:space-x-3 hover:from-pink-600 hover:to-purple-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg md:text-xl mt-6 md:mt-8"
           >
             <Send className="w-6 h-6 md:w-8 md:h-8" />
