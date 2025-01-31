@@ -13,7 +13,7 @@ export function Myform() {
   const [text,setText] = useState("")
 
   const sendDetails = async()=>{
-    await axios.post("http://localhost:9000/postreq/postdata" , {
+    await axios.post("https://freelancehub-one.vercel.app/postreq/postdata" , {
       username:username,
       email : email,
       phoneNumber : phoneNumber,
