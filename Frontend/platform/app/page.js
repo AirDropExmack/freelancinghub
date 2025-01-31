@@ -4,6 +4,12 @@ import myimage from "../mymaan.jpeg";
 import applysec from "../applysec.jpg";
 import john from "../johndoesec.jpg";
 import MyTweetEmbed  from "./Component/twitter";
+import { ShipWheel } from 'lucide-react';
+import { Laptop, Rocket, Medal, Clock, ArrowRight } from 'lucide-react';
+import { Navigation } from 'lucide-react';
+import { Myform } from "./Component/Contact";
+import { SiteFooter } from "./Component/footer";
+
 
 export default function Home() {
 
@@ -117,7 +123,203 @@ export default function Home() {
 
           </div>
         </div>
+      
+      {/* Services wala section */}
 
+      <div className="w-full h-auto  mt-[200px] flex flex-col items-center">
+        <div className="flex space-x-3">
+        <h1 className="font-bold text-[80px] text-center text-white">Services ( Mujhe काम चाहिए )</h1>
+        <ShipWheel className="text-blue-700 h-[100px] w-[100px]"></ShipWheel>
+        </div>
+ 
+        <div className="w-[80%]   h-auto flex flex-col space-y-7">
+          <div className="h-auto w-full mt-8 flex flex-wrap justify-between">
+            <div className="bg-gradient-to-br rounded-lg from-gray-900 to-gray-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] w-[40%] h-full flex flex-col">
+               <div className="w-full flex items-center justify-around">
+                <div className="flex flex-col space-y-3">
+                <h1 className="font-bold text-[30px] bg-gradient-to-r from-pink-600 via-purple-700 to-orange-500 bg-clip-text text-transparent mt-2">Landing Page</h1>
+                <p className="text-slate-500">Elevate your brand with stunning Landing page</p>
+                </div>
+                 <h1 className="bg-red-100 p-1 font-semibold rounded-lg bg-gradient-to-r from-blue-600  to-pink-500 text-white">Premium Service</h1>
+               </div>
+    
+               <div className="flex flex-col space-y-8 p-14">
+                 <div className="w-full flex space-x-4 items-center">
+                   <Rocket className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-pink-500"></Rocket>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Stunning Responsive website</h1>
+                 </div>
+
+
+                 <div className="w-full flex space-x-4 items-center">
+                   <Laptop className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-green-600"></Laptop>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Advanced UI/UX optimization</h1>
+                 </div>
+
+                 <div className="w-full flex space-x-4 items-center4">
+                   <Medal className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-yellow-400"></Medal>
+                   <h1 className="text-[20px] text-slate-300 font-medium">SEO-driven architecture</h1>
+                 </div>
+
+                 <div className="w-full flex space-x-4 items-center4">
+                   <Clock className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-purple-700"></Clock>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Express 5 day-delivery</h1>
+                 </div>
+               </div>
+               
+               <hr></hr>
+
+               <div className="flex justify-around w-full h-auto items-center">
+                <div className="flex flex-col space-y-2">
+                <h1 className="font-bold text-white text-[40px]">₹2000</h1>
+                <p className="font-medium text-slate-400">per Landing page</p>
+                </div>
+
+                <div>
+                  <h1 className="bg-slate-900 text-white p-2 rounded-lg font-bold">20% off</h1>
+                </div>
+               
+               </div>
+
+               <div className="w-full h-auto flex justify-center items-center mt-4">
+                  <div className="bg-gradient-to-r rounded-2xl from-pink-600 via-purple-700 to-orange-500 flex space-x-3 w-[70%] p-2 items-center justify-center">
+                    <h1 className="text-white font-bold text-[20px]">Start your project</h1>
+                    <ArrowRight className="text-white h-[30px] w-[30px]"></ArrowRight>
+                  </div>
+               </div>
+               
+            </div>
+
+            <div className="bg-gradient-to-br rounded-lg from-gray-900 to-gray-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] w-[40%] h-full">
+            <div className="w-full flex items-center justify-around">
+                <div className="flex flex-col space-y-3">
+                <h1 className="font-bold text-[30px] bg-gradient-to-r from-pink-600 via-purple-700 to-orange-500 bg-clip-text text-transparent mt-2">Landing Page</h1>
+                <p className="text-slate-500">Elevate your brand with stunning Landing page</p>
+                </div>
+                 <h1 className="bg-red-100 p-1 font-semibold rounded-lg bg-gradient-to-r from-blue-600  to-pink-500 text-white">Premium Service</h1>
+               </div>
+    
+               <div className="flex flex-col space-y-8 p-14">
+                 <div className="w-full flex space-x-4 items-center">
+                   <Rocket className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-pink-500"></Rocket>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Stunning Responsive website</h1>
+                 </div>
+
+
+                 <div className="w-full flex space-x-4 items-center">
+                   <Laptop className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-green-600"></Laptop>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Advanced UI/UX optimization</h1>
+                 </div>
+
+                 <div className="w-full flex space-x-4 items-center4">
+                   <Medal className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-yellow-400"></Medal>
+                   <h1 className="text-[20px] text-slate-300 font-medium">SEO-driven architecture</h1>
+                 </div>
+
+                 <div className="w-full flex space-x-4 items-center4">
+                   <Clock className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-purple-700"></Clock>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Express 5 day-delivery</h1>
+                 </div>
+               </div>
+               
+               <hr></hr>
+
+               <div className="flex justify-around w-full h-auto items-center">
+                <div className="flex flex-col space-y-2">
+                <h1 className="font-bold text-white text-[40px]">₹2000</h1>
+                <p className="font-medium text-slate-400">per Landing page</p>
+                </div>
+
+                <div>
+                  <h1 className="bg-slate-900 text-white p-2 rounded-lg font-bold">20% off</h1>
+                </div>
+               
+               </div>
+
+               <div className="w-full h-auto flex justify-center items-center mt-4">
+                  <div className="bg-gradient-to-r rounded-2xl from-pink-600 via-purple-700 to-orange-500 flex space-x-3 w-[70%] p-2 items-center justify-center">
+                    <h1 className="text-white font-bold text-[20px]">Start your project</h1>
+                    <ArrowRight className="text-white h-[30px] w-[30px]"></ArrowRight>
+                  </div>
+               </div>
+
+
+            </div>
+            <div className=" h-auto w-full flex justify-center items-center">
+            <div className="bg-gradient-to-br rounded-lg from-gray-900 to-gray-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] w-[40%] h-full flex flex-col mt-[60px]">
+            <div className="w-full flex items-center justify-around">
+                <div className="flex flex-col space-y-3">
+                <h1 className="font-bold text-[30px] bg-gradient-to-r from-pink-600 via-purple-700 to-orange-500 bg-clip-text text-transparent mt-2">Landing Page</h1>
+                <p className="text-slate-500">Elevate your brand with stunning Landing page</p>
+                </div>
+                 <h1 className="bg-red-100 p-1 font-semibold rounded-lg bg-gradient-to-r from-blue-600  to-pink-500 text-white">Premium Service</h1>
+               </div>
+    
+               <div className="flex flex-col space-y-8 p-14">
+                 <div className="w-full flex space-x-4 items-center">
+                   <Rocket className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-pink-500"></Rocket>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Stunning Responsive website</h1>
+                 </div>
+
+
+                 <div className="w-full flex space-x-4 items-center">
+                   <Laptop className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-green-600"></Laptop>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Advanced UI/UX optimization</h1>
+                 </div>
+
+                 <div className="w-full flex space-x-4 items-center4">
+                   <Medal className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-yellow-400"></Medal>
+                   <h1 className="text-[20px] text-slate-300 font-medium">SEO-driven architecture</h1>
+                 </div>
+
+                 <div className="w-full flex space-x-4 items-center4">
+                   <Clock className="h-[50px] w-[50px] bg-blue-900 rounded-lg p-1 text-purple-700"></Clock>
+                   <h1 className="text-[20px] text-slate-300 font-medium">Express 5 day-delivery</h1>
+                 </div>
+               </div>
+               
+               <hr></hr>
+
+               <div className="flex justify-around w-full h-auto items-center">
+                <div className="flex flex-col space-y-2">
+                <h1 className="font-bold text-white text-[40px]">₹2000</h1>
+                <p className="font-medium text-slate-400">per Landing page</p>
+                </div>
+
+                <div>
+                  <h1 className="bg-slate-900 text-white p-2 rounded-lg font-bold">20% off</h1>
+                </div>
+               
+               </div>
+
+               <div className="w-full h-auto flex justify-center items-center mt-4">
+                  <div className="bg-gradient-to-r rounded-2xl from-pink-600 via-purple-700 to-orange-500 flex space-x-3 w-[70%] p-2 items-center justify-center">
+                    <h1 className="text-white font-bold text-[20px]">Start your project</h1>
+                    <ArrowRight className="text-white h-[30px] w-[30px]"></ArrowRight>
+                  </div>
+               </div>
+            </div>
+           </div>
+
+          </div>
+
+          
+        </div>
+
+        {/* contact us form  */}
+
+        <div className="w-full h-[800px] mt-[150px] flex flex-col items-center">
+          <div className="w-full flex justify-center items-center space-x-7">
+          <h1 className="font-bold text-white text-[80px]">Contact (डाउट पूछो)</h1>
+          <Navigation className="h-[60px] w-[60px] text-purple-600 font-bold"></Navigation>
+          </div>
+          <Myform></Myform>
+        </div>
+
+         {/* fotter section */}
+
+        <SiteFooter></SiteFooter>
+        
+      </div>
 
       </div>
     </>

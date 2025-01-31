@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function Navbar(){
     return(
         <>
-        <div className="fixed bg-black w-full h-[100px] flex items-center">
+        <div className="fixed bg-black z-50 w-full h-[100px] flex items-center">
             <div className="absolute left-[10%]">
               <h1 className="font-bold text-[30px] text-blue-600 hover:cursor-pointer">Freelancing <span className='bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent hover:border-b-2 border-orange-500'>Hub</span></h1>
             </div>
