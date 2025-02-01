@@ -22,6 +22,10 @@ export function Myform() {
     .then((response)=>{
       console.log("your message is " + response.data.msg)
       alert("your message is " + response.data.msg)
+      setUsername("")
+      setEmail("")
+      setphoneNumber("")
+      setText("")
     })
     .catch((error)=>{
       console.log("your message is " + error)
