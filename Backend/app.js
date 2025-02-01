@@ -25,7 +25,7 @@ const contactLimiter = rateLimit({
 
 
 app.use(cors({
-    origin : "https://freelancinghub-eight.vercel.app",
+    origin : "https://freelancinghub.vercel.app",
     methods : ["GET","POST"],
     allowedHeaders : ["Content-Type"]
   }))
