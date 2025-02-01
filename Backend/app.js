@@ -33,7 +33,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get("/" , (req,res)=>{
-  return res.json({msg:"Welcome to the v4 of the freelancing site"});
+  return res.json({msg:"Welcome to the v5 of the freelancing site"});
 })
 
 const checkData = zod.object({
