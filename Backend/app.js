@@ -7,6 +7,7 @@ const PORT = process.env.PORT;
 const Database = process.env.DATABASE_URL;
 // const secret_code = process.env.secret_code;
 const cors = require("cors")
+const rateLimit = require("express-rate-limit")
 console.log("The database url is : " + Database);
 const zod = require("zod");
 
@@ -15,6 +16,13 @@ const zod = require("zod");
 //   methods : ["GET","POST"],
 //   allowedHeaders : ["Content-Type"]
 // }))
+
+const contactLimiter = rateLimit({
+  windowMs: 5 * 60 * 1000, 
+  max: 5, 
+  message: "Too many requests from this IP, please try again later.",
+});
+
 
 app.use(cors({
     origin : "https://freelancinghub.vercel.app",
@@ -25,7 +33,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get("/" , (req,res)=>{
-  return res.json({msg:"Welcome to the v1 of the freelancing site"});
+  return res.json({msg:"Welcome to the v2 of the freelancing site"});
 })
 
 const checkData = zod.object({
@@ -36,7 +44,7 @@ const checkData = zod.object({
 })
 
 // console.log("done")
-app.post("/postreq/postdata" , async(req,res)=>{
+app.post("/postreq/postdata" ,contactLimiter ,async(req,res)=>{
     const {success} = checkData.safeParse(req.body);
     if(!success) return res.json({msg : "Your data do not fulfill our data requirement || Insert a new data"});
     try{
