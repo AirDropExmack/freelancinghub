@@ -3,7 +3,7 @@
 import { Send, Sparkles, MessageSquare, User, Phone, Mail } from 'lucide-react';
 import axios from 'axios';
 import { useState } from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
 export function Myform() {
 
  
@@ -13,6 +13,15 @@ export function Myform() {
   const [text,setText] = useState("")
 
   const sendDetails = async()=>{
+
+
+    if(!username.trim()) toast.error("Please enter the username")
+    if(!email.trim()) toast.error("Please enter the email")
+    if(!phoneNumber.trim()) toast.error("Please enter the Phone number")
+    if(!text.trim()) toast.error("Please enter your message")
+
+
+
     await axios.post("https://business-2-murex.vercel.app/postreq/postdata" , {
       username:username,
       email : email,
@@ -21,10 +30,10 @@ export function Myform() {
     })
     .then((response)=>{
       if(response.status === 429){
-        return alert("Too many request try after 10 minutes")
+        return toast.error("Too many request try after 10 minutes")
       }
       console.log(response.data.msg)
-      alert(response.data.msg)
+      toast.success(response.data.msg)
       setUsername("")
       setEmail("")
       setphoneNumber("")
@@ -32,7 +41,7 @@ export function Myform() {
     })
     .catch((error)=>{
       console.log(error)
-      alert(error)
+      toast.error(error)
       setUsername("")
       setEmail("")
       setphoneNumber("")
@@ -126,6 +135,8 @@ export function Myform() {
           </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
+    
   );
 }
