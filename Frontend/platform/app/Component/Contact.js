@@ -22,7 +22,7 @@ export function Myform() {
 
 
 
-    await axios.post("https://business-2-murex.vercel.app/postreq/postdata" , {
+    await axios.post("https://freelancinghub-jxoy.vercel.app/postreq/postdata" , {
       username:username,
       email : email,
       phoneNumber : phoneNumber,
