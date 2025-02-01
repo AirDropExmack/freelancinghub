@@ -58,6 +58,7 @@ export function Myform() {
                   type="text"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-base md:text-lg"
                   placeholder="Your Name"
+                  value={username}
                   onChange={(e)=>setUsername(e.target.value)}
                   required
                 />
@@ -71,6 +72,7 @@ export function Myform() {
                   type="tel"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-base md:text-lg"
                   placeholder="Your Phone"
+                  value={phoneNumber}
                   onChange={(e)=>setphoneNumber(e.target.value)}
                   required
                 />
@@ -84,6 +86,7 @@ export function Myform() {
                   type="email"
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 text-base md:text-lg"
                   placeholder="Your Email"
+                  value={email}
                   onChange={(e)=>setEmail(e.target.value)}
                   required
                 />
@@ -98,6 +101,7 @@ export function Myform() {
                   className="w-full pl-10 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-white/20 border border-purple-300/30 rounded-2xl text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 hover:bg-white/30 resize-none text-base md:text-lg"
                   placeholder="Type your message here... 🚀"
                   onChange={(e)=>setText(e.target.value)}
+                  value={text}
                   required
                 />
               </div>
