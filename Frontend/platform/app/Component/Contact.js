@@ -20,7 +20,7 @@ export function Myform() {
       text : text
     })
     .then((response)=>{
-      if(response.data.status === 429){
+      if(response.status === 429){
         return alert("Too many request try after 10 minutes")
       }
       console.log(response.data.msg)
@@ -31,8 +31,12 @@ export function Myform() {
       setText("")
     })
     .catch((error)=>{
-      console.log("your message is " + error)
-      alert("your message is " + error)
+      console.log(error)
+      alert(error)
+      setUsername("")
+      setEmail("")
+      setphoneNumber("")
+      setText("")
     })
   }
 
