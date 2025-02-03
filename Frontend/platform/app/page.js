@@ -104,7 +104,7 @@ export default function Home() {
             <div className="w-full flex flex-col md:flex-row justify-center items-center space-y-7 md:space-y-0 md:space-x-7">
               {[
                 { title: "Landing Page", price: "₹2000", delivery: "5 days" },
-                { title: "Backend Servers", price: "₹1000", delivery: "6 days" },
+                { title: "AI projects", price: "₹1000", delivery: "6 days" },
               ].map((service, index) => (
                 <div key={index} className="bg-gradient-to-br rounded-lg from-gray-900 to-gray-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] w-full md:w-[45%] h-auto flex flex-col p-6">
                   <div className="w-full flex items-center justify-around">
