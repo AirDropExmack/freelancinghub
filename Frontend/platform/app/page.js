@@ -103,8 +103,8 @@ export default function Home() {
           <div className="w-full md:w-[80%] h-auto flex flex-col space-y-7 mt-8">
             <div className="w-full flex flex-col md:flex-row justify-center items-center space-y-7 md:space-y-0 md:space-x-7">
               {[
-                { title: "Landing Page", price: "₹2000", delivery: "5 days" },
-                { title: "AI projects", price: "₹1000", delivery: "6 days" },
+                { title: "Landing Page", price: "₹2999", delivery: "5 days" },
+                { title: "AI projects", price: "₹3999", delivery: "6 days" },
               ].map((service, index) => (
                 <div key={index} className="bg-gradient-to-br rounded-lg from-gray-900 to-gray-800 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] w-full md:w-[45%] h-auto flex flex-col p-6">
                   <div className="w-full flex items-center justify-around">
@@ -138,7 +138,7 @@ export default function Home() {
                       <p className="font-medium text-slate-400">per {service.title}</p>
                     </div>
                     <div>
-                      <h1 className="bg-slate-900 text-white p-2 rounded-lg font-bold">20% off</h1>
+                      <h1 className="bg-slate-900 text-white p-2 rounded-lg font-bold">10% off</h1>
                     </div>
                   </div>
                   <div className="w-full h-auto flex justify-center items-center mt-4 transition-transform duration-300 hover:scale-110 z-50">
