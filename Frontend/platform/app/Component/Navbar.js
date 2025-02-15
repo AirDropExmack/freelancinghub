@@ -15,7 +15,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black z-100">
+    <nav className="fixed top-0 left-0 w-full bg-black z-50">
       <div className="container mx-auto px-4 flex justify-between items-center h-[100px]">
         {/* Logo */}
         <div>
