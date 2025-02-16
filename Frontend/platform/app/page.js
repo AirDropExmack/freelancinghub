@@ -188,7 +188,7 @@ export default function Home() {
                     <h1 className="bg-slate-900 text-white p-2 rounded-lg font-bold">20% off</h1>
                   </div>
                 </div>
-                <div className="w-full h-auto flex justify-center items-center mt-4 transition-transform duration-300 hover:scale-110 z-50">
+                <div className="w-full h-auto flex justify-center items-center mt-4 transition-transform duration-300 hover:scale-110 z-10">
                   <div className="bg-gradient-to-r rounded-2xl from-pink-600 via-purple-700 to-orange-500 flex space-x-3 w-[70%] p-2 items-center justify-center">
                     <h1 className="text-white font-bold text-[16px] md:text-[20px]">Start your project</h1>
                     <ArrowRight className="text-white h-[24px] w-[24px] md:h-[30px] md:w-[30px]" />
