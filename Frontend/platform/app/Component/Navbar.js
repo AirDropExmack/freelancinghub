@@ -8,10 +8,10 @@ export function Navbar() {
 
   const NavLinks = [
     { href: "/", label: "Home" },
-    { href: "", label: "About" },
-    { href: "/", label: "Pricing" },
-    { href: "/", label: "Connect" },
-    { href: "/", label: "My Work" }
+    { href: "https://www.linkedin.com/in/mohitsatilinks/", label: "About" },
+    { href: "https://x.com/mohitsatitwt", label: "Pricing" },
+    { href: "https://x.com/mohitsatitwt", label: "Connect" },
+    { href: "https://www.linkedin.com/in/mohitsatilinks/", label: "My Work" }
   ];
 
   return (
