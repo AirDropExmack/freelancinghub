@@ -84,7 +84,7 @@ export default function Home() {
           </h1>
           <div className="flex flex-col items-center w-full h-auto mt-[50px] md:mt-[100px]">
             {[0, 1, 2].map((i) => (
-              <div key={i} className="w-full h-auto flex flex-col md:flex-row justify-center items-center space-y-5 md:space-y-0 md:space-x-5">
+              <div key={i} className="w-full h-auto flex flex-col md:flex-row justify-center items-center space-y-5 md:space-y-0 md:space-x-5 z-10">
                 {tweetId.slice(i * 3, (i + 1) * 3).map((id) => (
                   <MyTweetEmbed key={id} userid={id} />
                 ))}
