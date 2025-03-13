@@ -25,7 +25,7 @@ const contactLimiter = rateLimit({
 
 
 app.use(cors({
-    origin : "https://freelancinghub-eight.vercel.app",
+    origin : "https://we-agency.vercel.app",
     methods : ["GET","POST"],
     allowedHeaders : ["Content-Type"]
   }))
@@ -33,7 +33,7 @@ app.use(cors({
 app.use(express.json());
 
 app.get("/" , (req,res)=>{
-  return res.json({msg:"Welcome to the v6 of the freelancing site"});
+  return res.json({msg:"Welcome to the v7 of the freelancing site"});
 })
 
 const checkData = zod.object({
